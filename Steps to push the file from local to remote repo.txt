@@ -1,0 +1,39 @@
+PowerShell 7.3.3
+Loading personal and system profiles took 1285ms.
+C:\Azure\Custom [(master)]> git add .
+fatal: detected dubious ownership in repository at 'C:/Azure/Custom'
+'C:/Azure/Custom' is owned by:
+        'S-1-5-32-544'
+but the current user is:
+        'S-1-5-21-2459447865-1205550510-3417825803-1001'
+To add an exception for this directory, call:
+
+        git config --global --add safe.directory C:/Azure/Custom
+C:\Azure\Custom [(master)]> gi config--global -add safe.directory C:/Azure/Custom
+Get-Item: A parameter cannot be found that matches parameter name 'add'.
+C:\Azure\Custom [(master)]> gi config--global --add safe.directory C:/Azure/Custom
+Get-Item: A positional parameter cannot be found that accepts argument '--add'.
+C:\Azure\Custom [(master)]> git  config--global --add safe.directory C:/Azure/Custom
+git: 'config--global' is not a git command. See 'git --help'.
+C:\Azure\Custom [(master)]> git  config --global --add safe.directory C:/Azure/Custom
+C:\Azure\Custom [master +1 ~0 -0 !]> git add .
+C:\Azure\Custom [master +1 ~0 -0 ~]> git commit -m "Added script1.json"
+[master (root-commit) 736b524] Added script1.json
+ 1 file changed, 15 insertions(+)
+ create mode 100644 script1.json
+C:\Azure\Custom [master]> git pushsub
+git: 'pushsub' is not a git command. See 'git --help'.
+C:\Azure\Custom [master]> git branch  -M main
+C:\Azure\Custom [main]> git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+C:\Azure\Custom [main]> git remote  add origin https://github.com/syedmurtaza007/RBAC.git
+C:\Azure\Custom [main]> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 443 bytes | 221.00 KiB/s, done.
